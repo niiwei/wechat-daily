@@ -6,26 +6,21 @@
   <title>公众号订阅日报</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #faf9f7;
-      --bg-secondary: #f5f3f0;
-      --bg-card: #ffffff;
-      --bg-highlight: #fef9e7;
+      --bg-primary: #f7f5f0;
+      --bg-secondary: #f0ece3;
+      --bg-card: #faf8f3;
       --text-primary: #1a1a1a;
-      --text-secondary: #666666;
-      --text-muted: #999999;
-      --accent: #2563eb;
-      --accent-light: #dbeafe;
-      --accent-orange: #f97316;
-      --accent-green: #22c55e;
-      --accent-purple: #8b5cf6;
-      --border: #e5e5e5;
-      --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
-      --shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
-      --radius: 12px;
-      --radius-lg: 16px;
+      --text-secondary: #5c5c5c;
+      --text-muted: #8a8a8a;
+      --accent: #8b4513;
+      --accent-light: #d4a574;
+      --border: #d9d3c7;
+      --border-dark: #b8b0a0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-hover: 0 4px 16px rgba(0,0,0,0.1);
     }
 
     * {
@@ -35,255 +30,201 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
       background: var(--bg-primary);
       color: var(--text-primary);
-      line-height: 1.6;
+      line-height: 1.7;
       min-height: 100vh;
+      font-size: 16px;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 60px 40px;
     }
 
-    @media (min-width: 1400px) {
+    @media (min-width: 1200px) {
       .container {
-        max-width: 1400px;
-        padding: 48px 32px;
+        max-width: 1000px;
+        padding: 80px 60px;
       }
     }
 
-    /* Header */
+    /* Header - Newspaper Style */
     header {
       text-align: center;
-      margin-bottom: 48px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 3px double var(--border-dark);
     }
 
-    h1 {
-      font-family: 'Noto Serif SC', serif;
-      font-size: 2.5rem;
+    .masthead {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      color: var(--text-primary);
     }
 
-    .subtitle {
+    .tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.1rem;
       color: var(--text-secondary);
-      font-size: 1rem;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
     }
 
-    .meta-badges {
+    .edition-info {
       display: flex;
       justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.875rem;
-      font-weight: 500;
+      gap: 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
-    .badge-primary {
-      background: var(--accent-light);
-      color: var(--accent);
+    .edition-info span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .badge-secondary {
-      background: var(--bg-secondary);
-      color: var(--text-secondary);
+    .edition-info::before,
+    .edition-info::after {
+      content: '—';
+      color: var(--border-dark);
     }
 
     /* Overview Section */
     .overview {
-      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-highlight) 100%);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-      margin-bottom: 40px;
+      background: var(--bg-card);
       border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .overview::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      border: 1px solid var(--border);
+      pointer-events: none;
     }
 
     .overview-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 24px;
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-
-    .overview-icon {
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
+    .stats-line {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
       margin-bottom: 24px;
     }
 
-    .stat-card {
-      background: var(--bg-card);
-      padding: 20px;
-      border-radius: var(--radius);
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
+    .stats-line strong {
       color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .stat-label {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
+      font-weight: 600;
     }
 
     .sources-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      justify-content: center;
+      gap: 16px;
     }
 
     .source-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--bg-card);
-      padding: 10px 16px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      box-shadow: var(--shadow);
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      background: var(--bg-primary);
     }
 
     .source-count {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
       background: var(--accent);
       color: white;
-      padding: 2px 10px;
-      border-radius: 12px;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-family: 'Source Serif 4', serif;
     }
 
     /* Content Sections */
     .content-section {
-      margin-bottom: 48px;
+      margin-bottom: 60px;
     }
 
     .section-header {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
       border-bottom: 2px solid var(--text-primary);
     }
 
-    .section-icon {
-      font-size: 1.5rem;
-    }
-
     .section-title {
-      font-family: 'Noto Serif SC', serif;
-      font-size: 1.5rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.75rem;
       font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
-    /* Accounts Grid */
-    .accounts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-      gap: 20px;
-    }
-
-    @media (min-width: 1200px) {
-      .accounts-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1400px) {
-      .accounts-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .account-card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .account-card:hover {
-      box-shadow: var(--shadow-hover);
+    /* Account Sections */
+    .account-section {
+      margin-bottom: 48px;
+      page-break-inside: avoid;
     }
 
     .account-header {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 20px;
-      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .account-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-purple) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .account-info {
-      flex: 1;
-      min-width: 0;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-dark);
     }
 
     .account-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem;
       font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      color: var(--accent);
     }
 
     .account-meta {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
+      font-style: italic;
     }
 
+    /* Article List - Clean Editorial Style */
     .article-list {
-      padding: 4px 0;
+      list-style: none;
     }
 
     .article-item {
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.15s ease;
+      padding: 16px 0;
+      border-bottom: 1px dotted var(--border);
+      transition: background 0.2s ease;
     }
 
     .article-item:last-child {
@@ -292,89 +233,94 @@
 
     .article-item:hover {
       background: var(--bg-secondary);
+      margin: 0 -16px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
 
     .article-title {
-      font-family: 'Noto Serif SC', serif;
-      font-size: 1rem;
+      font-family: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+      font-size: 1.1rem;
       font-weight: 600;
       color: var(--text-primary);
       text-decoration: none;
       display: block;
-      margin-bottom: 8px;
       line-height: 1.5;
+      margin-bottom: 6px;
     }
 
     .article-title:hover {
       color: var(--accent);
     }
 
-    .article-summary {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    .article-title::before {
+      content: '› ';
+      color: var(--accent-light);
     }
 
     .article-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 10px;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
-    }
-
-    .article-tag {
-      background: var(--bg-secondary);
-      padding: 2px 8px;
-      border-radius: 4px;
+      font-style: italic;
     }
 
     /* Empty State */
     .empty-state {
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 40px;
       color: var(--text-muted);
+      font-style: italic;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 40px;
       color: var(--text-muted);
       font-size: 0.85rem;
+      font-style: italic;
       border-top: 1px solid var(--border);
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
     /* Mobile */
     @media (max-width: 768px) {
       .container {
-        padding: 24px 16px;
+        padding: 40px 24px;
       }
 
-      h1 {
-        font-size: 1.75rem;
+      .masthead {
+        font-size: 2.5rem;
+      }
+
+      .edition-info {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .edition-info::before,
+      .edition-info::after {
+        display: none;
       }
 
       .overview {
-        padding: 20px;
+        padding: 24px;
       }
 
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .account-header {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
       }
 
-      .accounts-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title {
-        font-size: 1.25rem;
+      .article-item:hover {
+        background: transparent;
       }
     }
   </style>
@@ -382,11 +328,11 @@
 <body>
   <div class="container">
     <header>
-      <h1>📰 公众号订阅日报</h1>
-      <p class="subtitle">每日精选 · 去芜存菁</p>
-      <div class="meta-badges">
-        <span class="badge badge-primary" id="current-date">📅 加载中...</span>
-        <span class="badge badge-secondary">🤖 AI 自动整理</span>
+      <h1 class="masthead">公众号订阅日报</h1>
+      <p class="tagline">每日精选 · 去芜存菁</p>
+      <div class="edition-info">
+        <span id="current-date">Loading...</span>
+        <span>Daily Digest</span>
       </div>
     </header>
 
@@ -405,12 +351,8 @@
 
   <script>
     // 动态插入当前日期
-    document.getElementById('current-date').textContent = '📅 ' + new Date().toLocaleDateString('zh-CN', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      weekday: 'long'
-    });
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('zh-CN', dateOptions);
 
     // 加载日报数据
     async function loadDailyData() {
@@ -437,22 +379,11 @@
 
       const overviewHtml = `
         <div class="overview">
-          <div class="overview-header">
-            <span class="overview-icon">📊</span>
-            <span>今日概览</span>
+          <div class="overview-header">今日概览</div>
+          <div class="stats-line">
+            共收录 <strong>${day.totalArticles}</strong> 篇文章，
+            来自 <strong>${totalAccounts}</strong> 个公众号
           </div>
-
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-number">${day.totalArticles}</div>
-              <div class="stat-label">文章总数</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">${totalAccounts}</div>
-              <div class="stat-label">更新公众号</div>
-            </div>
-          </div>
-
           <div class="sources-list">
             ${day.accounts.map(account => `
               <span class="source-tag">
@@ -484,35 +415,26 @@
       container.innerHTML = `
         <section class="content-section">
           <div class="section-header">
-            <span class="section-icon">📑</span>
             <h2 class="section-title">文章列表</h2>
           </div>
 
-          <div class="accounts-grid">
-            ${day.accounts.map(account => `
-              <div class="account-card">
-                <div class="account-header">
-                  <div class="account-avatar">${account.name.charAt(0)}</div>
-                  <div class="account-info">
-                    <div class="account-name">${account.name}</div>
-                    <div class="account-meta">${account.articles.length} 篇文章</div>
-                  </div>
-                </div>
-
-                <div class="article-list">
-                  ${account.articles.map(article => `
-                    <article class="article-item">
-                      <a href="${article.link}" target="_blank" class="article-title">${article.title}</a>
-                      <p class="article-summary">${article.summary}</p>
-                      <div class="article-meta">
-                        <span>🕐 ${article.publishTime}</span>
-                      </div>
-                    </article>
-                  `).join('')}
-                </div>
+          ${day.accounts.map(account => `
+            <div class="account-section">
+              <div class="account-header">
+                <span class="account-name">${account.name}</span>
+                <span class="account-meta">${account.articles.length} 篇文章</span>
               </div>
-            `).join('')}
-          </div>
+
+              <ul class="article-list">
+                ${account.articles.map(article => `
+                  <li class="article-item">
+                    <a href="${article.link}" target="_blank" class="article-title">${article.title}</a>
+                    <div class="article-meta">发布时间：${article.publishTime}</div>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          `).join('')}
         </section>
       `;
     }
