@@ -27,9 +27,11 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install dependencies
-        run: npm install
-
+      - name: Install dependencies  
+        run: |  
+          npm config set registry https://registry.npmmirror.com  
+          npm install  
+          
       - name: Fetch RSS data
         run: npm run fetch
 
