@@ -38,9 +38,16 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 40px 24px;
+    }
+
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1400px;
+        padding: 48px 32px;
+      }
     }
 
     header {
@@ -109,6 +116,34 @@
       margin-bottom: 20px;
       overflow: hidden;
       transition: box-shadow 0.2s ease;
+    }
+
+    @media (min-width: 1024px) {
+      .accounts-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .account-section {
+        margin-bottom: 0;
+      }
+
+      .account-section:only-child,
+      .account-section:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .accounts-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .account-section:only-child,
+      .account-section:last-child:nth-child(3n+1) {
+        grid-column: span 1;
+      }
     }
 
     .account-section:hover {
@@ -324,7 +359,8 @@
             <h2 class="day-title">${day.date}</h2>
             <span class="day-count">${day.totalArticles} 篇</span>
           </div>
-          
+
+          <div class="accounts-grid">
           ${day.accounts.map(account => `
             <div class="account-section">
               <div class="account-header">
@@ -349,6 +385,7 @@
               </div>
             </div>
           `).join('')}
+          </div>
         </section>
       `).join('');
     }

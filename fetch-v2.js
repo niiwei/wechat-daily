@@ -1,7 +1,7 @@
 const Parser = require('rss-parser');
 const fs = require('fs').promises;
 const path = require('path');
-const { execSync } = require('child_process');
+const { spawnSubagent } = require('./subagent-helper');
 
 const parser = new Parser({
   headers: {
@@ -34,73 +34,11 @@ function extractCoreContent(content) {
   let text = content.replace(/<[^>]+>/g, ' ');
   AD_PATTERNS.forEach(pattern => { text = text.replace(pattern, ''); });
   text = text.replace(/\s+/g, ' ').trim();
-  const maxLength = 800;
+  const maxLength = 500;
   if (text.length > maxLength) {
     text = text.substring(0, maxLength) + '...';
   }
   return text;
-}
-
-// 生成摘要 - 使用本地算法
-function generateSummary(title, content) {
-  if (!content || content.length < 50) {
-    return content || '暂无摘要';
-  }
-
-  const cleanText = content.replace(/\s+/g, ' ').trim();
-  const paragraphs = cleanText.split(/[。！？\n]+/).filter(p => p.trim().length > 10);
-
-  if (paragraphs.length === 0) {
-    return cleanText.substring(0, 150) + '...';
-  }
-
-  const keySentences = [];
-
-  // 首句
-  if (paragraphs[0] && paragraphs[0].length > 20) {
-    keySentences.push(paragraphs[0].trim());
-  }
-
-  // 包含关键信息的句子
-  const patterns = [
-    /\d+[\d,]*\.?\d*%?/,
-    /(结论|总结|建议|因此|所以|关键|核心|重要|观点)/,
-    /(表明|显示|发现|证明|意味着|指出)/,
-  ];
-
-  for (const para of paragraphs.slice(1, 8)) {
-    const trimmed = para.trim();
-    if (trimmed.length > 15 && trimmed.length < 200) {
-      const hasPattern = patterns.some(p => p.test(trimmed));
-      if (hasPattern && !keySentences.some(s => s.includes(trimmed.substring(0, 20)))) {
-        keySentences.push(trimmed);
-      }
-    }
-    if (keySentences.length >= 3) break;
-  }
-
-  // 补充第二句
-  if (keySentences.length < 2 && paragraphs.length > 1) {
-    const second = paragraphs[1].trim();
-    if (second.length > 15) {
-      keySentences.push(second);
-    }
-  }
-
-  let summary = keySentences.join('。');
-
-  const maxLength = 200;
-  if (summary.length > maxLength) {
-    summary = summary.substring(0, maxLength);
-    const lastPeriod = summary.lastIndexOf('。');
-    if (lastPeriod > maxLength * 0.6) {
-      summary = summary.substring(0, lastPeriod + 1);
-    } else {
-      summary = summary.substring(0, maxLength - 3) + '...';
-    }
-  }
-
-  return summary;
 }
 
 // 判断是否为昨天发布的文章
@@ -126,12 +64,9 @@ function formatTime(date) {
   return new Date(date).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
 }
 
-// 获取公众号名称 - 使用 RSS feed title
+// 获取公众号名称
 function getAccountName(feedUrl, feed) {
-  if (feed && feed.title) {
-    // 清理可能的额外信息
-    return feed.title.replace(/[\s-]*RSS[\s-]*/i, '').trim();
-  }
+  if (feed && feed.title) return feed.title;
   const match = feedUrl.match(/MP_WXS_(\d+)/);
   if (match) return `公众号_${match[1]}`;
   return '未知公众号';
@@ -146,6 +81,29 @@ async function fetchFeed(url) {
   } catch (error) {
     console.error(`Failed to fetch ${url}:`, error.message);
     return null;
+  }
+}
+
+// 使用 subagent 生成文章摘要
+async function summarizeArticle(title, content, link) {
+  try {
+    const cleanContent = extractCoreContent(content);
+    if (!cleanContent || cleanContent.length < 100) {
+      return cleanContent || '暂无摘要';
+    }
+
+    // 调用 summarizer subagent
+    const result = await spawnSubagent('summarizer', {
+      title,
+      content: cleanContent,
+      link
+    });
+
+    return result.summary || cleanContent.substring(0, 200) + '...';
+  } catch (error) {
+    console.error(`Summarize failed for ${title}:`, error.message);
+    const fallback = extractCoreContent(content);
+    return fallback.substring(0, 200) + '...';
   }
 }
 
@@ -168,11 +126,13 @@ async function main() {
     for (const item of feed.items) {
       const pubDate = item.pubDate || item.isoDate;
       if (pubDate && isYesterday(pubDate)) {
-        console.log(`  总结: ${item.title.substring(0, 40)}...`);
+        console.log(`  正在总结: ${item.title}`);
 
-        const rawContent = item['content:encoded'] || item.content || item.contentSnippet || '';
-        const cleanContent = extractCoreContent(rawContent);
-        const summary = generateSummary(item.title, cleanContent);
+        const summary = await summarizeArticle(
+          item.title,
+          item['content:encoded'] || item.content || item.contentSnippet,
+          item.link
+        );
 
         yesterdayArticles.push({
           accountName,
