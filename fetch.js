@@ -43,8 +43,13 @@ function extractCoreContent(content) {
 
 // 生成摘要 - 使用本地算法
 function generateSummary(title, content) {
-  if (!content || content.length < 50) {
-    return content || '暂无摘要';
+  // 如果没有内容，基于标题生成简单描述
+  if (!content || content.length < 30) {
+    // 尝试从标题提取关键信息生成一句话描述
+    if (title && title.length > 10) {
+      return `本文讨论了：${title.replace(/[：:].*$/, '')}`;
+    }
+    return '点击查看原文阅读详细内容';
   }
 
   const cleanText = content.replace(/\s+/g, ' ').trim();
