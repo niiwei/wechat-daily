@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公众号订阅日报</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #faf9f7;
+      --bg-secondary: #f5f3f0;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #666666;
+      --text-muted: #999999;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --border: #e5e5e5;
+      --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-top: 16px;
+    }
+
+    .day-section {
+      margin-bottom: 48px;
+    }
+
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--text-primary);
+    }
+
+    .day-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .day-count {
+      background: var(--text-primary);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .account-section {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .account-section:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .account-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .account-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .account-info {
+      flex: 1;
+    }
+
+    .account-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    .account-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .article-list {
+      padding: 8px 0;
+    }
+
+    .article-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s ease;
+    }
+
+    .article-item:last-child {
+      border-bottom: none;
+    }
+
+    .article-item:hover {
+      background: var(--bg-secondary);
+    }
+
+    .article-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .article-title:hover {
+      color: var(--accent);
+    }
+
+    .article-summary {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .article-tag {
+      background: var(--bg-secondary);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-state svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 16px;
+      opacity: 0.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .day-title {
+        font-size: 1.25rem;
+      }
+
+      .account-header {
+        padding: 12px 16px;
+      }
+
+      .article-item {
+        padding: 14px 16px;
+      }
+
+      .article-title {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>公众号订阅日报</h1>
+      <p class="subtitle">每日精选 · 去芜存菁</p>
+      <span class="date-badge" id="current-date"></span>
+    </header>
+
+    <main id="content">
+      <!-- 内容将由 JavaScript 动态加载 -->
+    </main>
+
+    <footer>
+      <p>Generated by OpenClaw · 每日自动更新</p>
+    </footer>
+  </div>
+
+  <script>
+    // 动态插入当前日期
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('zh-CN', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      weekday: 'long'
+    });
+
+    // 加载日报数据
+    async function loadDailyData() {
+      try {
+        const response = await fetch('./data/daily.json');
+        const data = await response.json();
+        renderContent(data);
+      } catch (error) {
+        console.error('加载数据失败:', error);
+        document.getElementById('content').innerHTML = `
+          <div class="empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <p>暂无数据，请稍后再试</p>
+          </div>
+        `;
+      }
+    }
+
+    function renderContent(data) {
+      const container = document.getElementById('content');
+      
+      if (!data || !data.days || data.days.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <p>暂无更新内容</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = data.days.map(day => `
+        <section class="day-section">
+          <div class="day-header">
+            <h2 class="day-title">${day.date}</h2>
+            <span class="day-count">${day.totalArticles} 篇</span>
+          </div>
+          
+          ${day.accounts.map(account => `
+            <div class="account-section">
+              <div class="account-header">
+                <div class="account-avatar">${account.name.charAt(0)}</div>
+                <div class="account-info">
+                  <div class="account-name">${account.name}</div>
+                  <div class="account-meta">${account.articles.length} 篇文章</div>
+                </div>
+              </div>
+              
+              <div class="article-list">
+                ${account.articles.map(article => `
+                  <article class="article-item">
+                    <a href="${article.link}" target="_blank" class="article-title">${article.title}</a>
+                    <p class="article-summary">${article.summary}</p>
+                    <div class="article-meta">
+                      <span>${article.publishTime}</span>
+                      ${article.tags ? article.tags.map(tag => `<span class="article-tag">${tag}</span>`).join('') : ''}
+                    </div>
+                  </article>
+                `).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </section>
+      `).join('');
+    }
+
+    // 页面加载时获取数据
+    loadDailyData();
+  </script>
+</body>
+</html>

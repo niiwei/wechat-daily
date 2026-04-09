@@ -1,0 +1,11 @@
+{
+  "name": "wechat-daily",
+  "version": "1.0.0",
+  "description": "个人公众号订阅日报",
+  "scripts": {
+    "fetch": "node fetch.js"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
