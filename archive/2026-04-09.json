@@ -5,16 +5,8 @@
   "totalArticles": 13,
   "categories": [
     {
-      "name": "其他",
+      "name": "AI前沿资讯",
       "articles": [
-        {
-          "title": "ropet 完成超千万美元融资：跨过 AI 宠物的「价格、销量、留存」不可能三角",
-          "link": "https://mp.weixin.qq.com/s/RQrEODEwt0cj74iQZxp7yQ",
-          "source": "极客公园",
-          "category": "其他",
-          "publishTime": "12:13",
-          "pubDate": "2026-04-09T04:13:08.000Z"
-        },
         {
           "title": "大三学生验证了罗福莉的“暴论”，我们和他聊了聊",
           "link": "https://mp.weixin.qq.com/s/NQzBvJYsqc3212mGHXqDEQ",
@@ -22,30 +14,6 @@
           "category": "其他",
           "publishTime": "09:04",
           "pubDate": "2026-04-09T01:04:42.000Z"
-        },
-        {
-          "title": "柔性触觉传感器厂商完成近亿元融资，切入具身智能与锂电安全双场景｜早起看早期",
-          "link": "https://mp.weixin.qq.com/s/vMMGG1_D6CKLLbFhbGP2hA",
-          "source": "36氪",
-          "category": "其他",
-          "publishTime": "08:08",
-          "pubDate": "2026-04-09T00:08:34.000Z"
-        },
-        {
-          "title": "8点1氪：张雪机车LOGO被指抄袭；水贝商户称白银销量暴跌90%；GoPro将全球裁员23%",
-          "link": "https://mp.weixin.qq.com/s/ExFKdeekj7ss3ZZwhwYgJA",
-          "source": "36氪",
-          "category": "其他",
-          "publishTime": "08:08",
-          "pubDate": "2026-04-09T00:08:34.000Z"
-        },
-        {
-          "title": "DeepSeek 网页升级，上线「专家模式」；腾讯上线「浏览器龙虾」；传比特币之父「中本聪」真实身份曝光｜极客早知道",
-          "link": "https://mp.weixin.qq.com/s/N2WxixwtWQeFjYx870oosg",
-          "source": "极客公园",
-          "category": "其他",
-          "publishTime": "08:05",
-          "pubDate": "2026-04-09T00:05:57.000Z"
         },
         {
           "title": "怎么用最小知识量，掌握 AI 编程？",
@@ -70,11 +38,56 @@
           "category": "其他",
           "publishTime": "07:46",
           "pubDate": "2026-04-08T23:46:09.000Z"
+        },
+        {
+          "title": "Meta 发布全新大模型：Muse Spark",
+          "link": "https://mp.weixin.qq.com/s/EB8U290R1Dx6EqTFd5ZAiw",
+          "source": "赛博禅心",
+          "category": "AI前沿",
+          "publishTime": "02:27",
+          "pubDate": "2026-04-08T18:27:44.000Z"
         }
       ]
     },
     {
-      "name": "AI产品",
+      "name": "商业科技快讯",
+      "articles": [
+        {
+          "title": "ropet 完成超千万美元融资：跨过 AI 宠物的「价格、销量、留存」不可能三角",
+          "link": "https://mp.weixin.qq.com/s/RQrEODEwt0cj74iQZxp7yQ",
+          "source": "极客公园",
+          "category": "其他",
+          "publishTime": "12:13",
+          "pubDate": "2026-04-09T04:13:08.000Z"
+        },
+        {
+          "title": "柔性触觉传感器厂商完成近亿元融资，切入具身智能与锂电安全双场景｜早起看早期",
+          "link": "https://mp.weixin.qq.com/s/vMMGG1_D6CKLLbFhbGP2hA",
+          "source": "36氪",
+          "category": "其他",
+          "publishTime": "08:08",
+          "pubDate": "2026-04-09T00:08:34.000Z"
+        },
+        {
+          "title": "8点1氪：张雪机车LOGO被指抄袭；水贝商户称白银销量暴跌90%；GoPro将全球裁员23%",
+          "link": "https://mp.weixin.qq.com/s/ExFKdeekj7ss3ZZwhwYgJA",
+          "source": "36氪",
+          "category": "其他",
+          "publishTime": "08:08",
+          "pubDate": "2026-04-09T00:08:34.000Z"
+        },
+        {
+          "title": "DeepSeek 网页升级，上线「专家模式」；腾讯上线「浏览器龙虾」；传比特币之父「中本聪」真实身份曝光｜极客早知道",
+          "link": "https://mp.weixin.qq.com/s/N2WxixwtWQeFjYx870oosg",
+          "source": "极客公园",
+          "category": "其他",
+          "publishTime": "08:05",
+          "pubDate": "2026-04-09T00:05:57.000Z"
+        }
+      ]
+    },
+    {
+      "name": "AI产品与工具",
       "articles": [
         {
           "title": "阿里电商AI新动向：围绕Token重构电商，组织迎来新一轮调整｜36氪独家",
@@ -99,19 +112,6 @@
           "category": "AI产品",
           "publishTime": "07:46",
           "pubDate": "2026-04-08T23:46:09.000Z"
-        }
-      ]
-    },
-    {
-      "name": "AI前沿",
-      "articles": [
-        {
-          "title": "Meta 发布全新大模型：Muse Spark",
-          "link": "https://mp.weixin.qq.com/s/EB8U290R1Dx6EqTFd5ZAiw",
-          "source": "赛博禅心",
-          "category": "AI前沿",
-          "publishTime": "02:27",
-          "pubDate": "2026-04-08T18:27:44.000Z"
         }
       ]
     },

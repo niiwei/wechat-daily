@@ -58,7 +58,7 @@
       ]
     },
     {
-      "name": "AI产品",
+      "name": "AI产品与工具",
       "articles": [
         {
           "title": "「敢不敢」胜过「能不能」，万字解析可灵 AI 的「非典型」突围路",
@@ -99,11 +99,19 @@
           "category": "AI产品",
           "publishTime": "07:46",
           "pubDate": "2026-04-07T23:46:15.000Z"
+        },
+        {
+          "title": "罗福莉再发声，Agent时代模型订阅制凉了？",
+          "link": "https://mp.weixin.qq.com/s/Uw-ccZ5djNCXIFNmd3ppfA",
+          "source": "字母AI",
+          "category": "AI前沿",
+          "publishTime": "18:11",
+          "pubDate": "2026-04-08T10:11:57.000Z"
         }
       ]
     },
     {
-      "name": "AI前沿",
+      "name": "AI前沿资讯",
       "articles": [
         {
           "title": "Claude每用户的年化贡献，是ChatGPT的30倍｜AI产品榜",
@@ -122,14 +130,6 @@
           "pubDate": "2026-04-08T10:11:57.000Z"
         },
         {
-          "title": "罗福莉再发声，Agent时代模型订阅制凉了？",
-          "link": "https://mp.weixin.qq.com/s/Uw-ccZ5djNCXIFNmd3ppfA",
-          "source": "字母AI",
-          "category": "AI前沿",
-          "publishTime": "18:11",
-          "pubDate": "2026-04-08T10:11:57.000Z"
-        },
-        {
           "title": "华裔领衔神秘小队，护航Anthropic“玻璃之翼”",
           "link": "https://mp.weixin.qq.com/s/5O770kkSIHInupMTyh1VXQ",
           "source": "字母AI",
@@ -138,25 +138,25 @@
           "pubDate": "2026-04-08T10:11:57.000Z"
         },
         {
-          "title": "Claude Code更新后「翻车」，思考深度骤降67%；MacBook Neo热销，苹果A18芯片库存告急；离职员工「被做成 AI 数字人」引热议｜极客早知道",
-          "link": "https://mp.weixin.qq.com/s/ZPRO3RVY8skcIYsuiFV5sg",
-          "source": "极客公园",
-          "category": "AI前沿",
-          "publishTime": "08:07",
-          "pubDate": "2026-04-08T00:07:22.000Z"
-        }
-      ]
-    },
-    {
-      "name": "技术开源",
-      "articles": [
-        {
           "title": "GLM-5.1 开源：零介入，交付整套的 Linux 桌面系统",
           "link": "https://mp.weixin.qq.com/s/1PlXlMWhfUs2pZ2DyIf6VA",
           "source": "赛博禅心",
           "category": "技术开源",
           "publishTime": "11:04",
           "pubDate": "2026-04-08T03:04:10.000Z"
+        }
+      ]
+    },
+    {
+      "name": "商业科技快讯",
+      "articles": [
+        {
+          "title": "Claude Code更新后「翻车」，思考深度骤降67%；MacBook Neo热销，苹果A18芯片库存告急；离职员工「被做成 AI 数字人」引热议｜极客早知道",
+          "link": "https://mp.weixin.qq.com/s/ZPRO3RVY8skcIYsuiFV5sg",
+          "source": "极客公园",
+          "category": "AI前沿",
+          "publishTime": "08:07",
+          "pubDate": "2026-04-08T00:07:22.000Z"
         }
       ]
     }
