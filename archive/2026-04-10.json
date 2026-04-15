@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-04-13T02:29:55.007Z",
+  "date": "2026年4月10日星期五",
+  "fileDate": "2026-04-10",
+  "totalArticles": 3,
+  "categories": [
+    {
+      "name": "商业洞察",
+      "articles": [
+        {
+          "title": "PM职场5年：90%的无效加班，都踩了这3个坑",
+          "link": "https://mp.weixin.qq.com/s/dhYVRCjDhF3wt10p08zLHw",
+          "source": "人人都是产品经理",
+          "category": "商业洞察",
+          "publishTime": "07:46",
+          "pubDate": "2026-04-09T23:46:05.000Z"
+        }
+      ]
+    },
+    {
+      "name": "AI前沿",
+      "articles": [
+        {
+          "title": "“AI灭世”，其实是Mythos和GPT-6的生意经",
+          "link": "https://mp.weixin.qq.com/s/jJhXdn9o7aHE-R0oDd0qQQ",
+          "source": "字母AI",
+          "category": "AI前沿",
+          "publishTime": "18:14",
+          "pubDate": "2026-04-10T10:14:18.000Z"
+        }
+      ]
+    },
+    {
+      "name": "其他",
+      "articles": [
+        {
+          "title": "SBTI火到服务器宕机，有人用AI几分钟搓了个新的",
+          "link": "https://mp.weixin.qq.com/s/XUFT1vXbOiGCBAqbGhXuDQ",
+          "source": "字母AI",
+          "category": "其他",
+          "publishTime": "18:14",
+          "pubDate": "2026-04-10T10:14:18.000Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-04-13T02:31:01.217Z",
+  "date": "2026年4月11日星期六",
+  "fileDate": "2026-04-11",
+  "totalArticles": 7,
+  "categories": [
+    {
+      "name": "其他",
+      "articles": [
+        {
+          "title": "专治AI说谎，25岁天才少女公司估值过百亿",
+          "link": "https://mp.weixin.qq.com/s/zU5yqCLWWqpHKkowwBGcHQ",
+          "source": "字母AI",
+          "category": "其他",
+          "publishTime": "11:56",
+          "pubDate": "2026-04-11T03:56:15.000Z"
+        },
+        {
+          "title": "星际之门三高管同时出走，奥特曼屋漏偏逢连夜雨",
+          "link": "https://mp.weixin.qq.com/s/RKXinmvsZE72d-gef96thA",
+          "source": "字母AI",
+          "category": "其他",
+          "publishTime": "11:56",
+          "pubDate": "2026-04-11T03:56:15.000Z"
+        },
+        {
+          "title": "保健品订阅制，西方早就跑通了，我们为什么还在“交学费”？",
+          "link": "https://mp.weixin.qq.com/s/NybtJq2sDfqPrqZaY4RgGg",
+          "source": "人人都是产品经理",
+          "category": "其他",
+          "publishTime": "10:06",
+          "pubDate": "2026-04-11T02:06:45.000Z"
+        },
+        {
+          "title": "4年经验面腾讯产品岗，一面暴露野路子硬伤",
+          "link": "https://mp.weixin.qq.com/s/_hHwwj6X03ASifgNPovO0g",
+          "source": "人人都是产品经理",
+          "category": "其他",
+          "publishTime": "10:06",
+          "pubDate": "2026-04-11T02:06:45.000Z"
+        },
+        {
+          "title": "给 DeepSeek 的最后一封催更信",
+          "link": "https://mp.weixin.qq.com/s/z0hCSWmyb_NlcCUYezAQHg",
+          "source": "人人都是产品经理",
+          "category": "其他",
+          "publishTime": "10:06",
+          "pubDate": "2026-04-11T02:06:45.000Z"
+        }
+      ]
+    },
+    {
+      "name": "AI前沿",
+      "articles": [
+        {
+          "title": "Anthropic 官方指南：怎么给 Agent 设计工具",
+          "link": "https://mp.weixin.qq.com/s/eOkICy56oQFAzmStzgTxkw",
+          "source": "赛博禅心",
+          "category": "AI前沿",
+          "publishTime": "12:17",
+          "pubDate": "2026-04-11T04:17:56.000Z"
+        }
+      ]
+    },
+    {
+      "name": "技术开源",
+      "articles": [
+        {
+          "title": "AI写了不到2000行代码，SBTI制造了2026年第一场刷屏",
+          "link": "https://mp.weixin.qq.com/s/rgkAGqzaVSI6kSFxM9g4qg",
+          "source": "字母AI",
+          "category": "技术开源",
+          "publishTime": "11:56",
+          "pubDate": "2026-04-11T03:56:15.000Z"
+        }
+      ]
+    }
+  ]
+}
