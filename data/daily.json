@@ -1,7 +1,145 @@
 {
-  "generatedAt": "2026-04-15T01:07:08.384Z",
+  "generatedAt": "2026-04-15T05:42:47.641Z",
   "date": "2026年4月14日星期二",
   "fileDate": "2026-04-14",
-  "totalArticles": 0,
-  "categories": []
+  "totalArticles": 14,
+  "categories": [
+    {
+      "name": "其他",
+      "articles": [
+        {
+          "title": "日本人，开始拒绝继承「巨额遗产」",
+          "link": "https://mp.weixin.qq.com/s/VlpqcoRGgE-KcHoaqqORbA",
+          "source": "36氪",
+          "category": "其他",
+          "publishTime": "21:36",
+          "pubDate": "2026-04-14T13:36:20.000Z"
+        },
+        {
+          "title": "中金涨薪了，人均薪酬涨至80万",
+          "link": "https://mp.weixin.qq.com/s/9gpNKdTAW7kouCBrUnJMKA",
+          "source": "36氪",
+          "category": "其他",
+          "publishTime": "21:36",
+          "pubDate": "2026-04-14T13:36:20.000Z"
+        },
+        {
+          "title": "这届打工人，白天给AI投毒，晚上蒸馏老板",
+          "link": "https://mp.weixin.qq.com/s/EzEgLVpOCOqkxBoHMDw7Xw",
+          "source": "36氪",
+          "category": "其他",
+          "publishTime": "21:36",
+          "pubDate": "2026-04-14T13:36:20.000Z"
+        },
+        {
+          "title": "被偷12吨巧克力后，雀巢给KitKat上了「总统级」安保，4辆SUV护送",
+          "link": "https://mp.weixin.qq.com/s/PITxpXUS1L114YxqFQCLyQ",
+          "source": "36氪",
+          "category": "其他",
+          "publishTime": "17:09",
+          "pubDate": "2026-04-14T09:09:51.000Z"
+        },
+        {
+          "title": "完整解读：斯坦福 AI 年度报告｜26版发布，423页",
+          "link": "https://mp.weixin.qq.com/s/fDqQJkM4e5Z3bSppLZ7YMA",
+          "source": "赛博禅心",
+          "category": "其他",
+          "publishTime": "14:44",
+          "pubDate": "2026-04-14T06:44:45.000Z"
+        },
+        {
+          "title": "飞书 CLI 创作者大赛｜搭建 + 体验双赛道开放，Mac mini、千元京东卡等你解锁",
+          "link": "https://mp.weixin.qq.com/s/dB1slrffZP_hj68KK2uRmw",
+          "source": "人人都是产品经理",
+          "category": "其他",
+          "publishTime": "07:46",
+          "pubDate": "2026-04-13T23:46:31.000Z"
+        },
+        {
+          "title": "木鸟、途家、美团对打，平台春天行动开“卷”",
+          "link": "https://mp.weixin.qq.com/s/87j4Pe3VIbzbxvVim2W5hg",
+          "source": "人人都是产品经理",
+          "category": "其他",
+          "publishTime": "07:46",
+          "pubDate": "2026-04-13T23:46:31.000Z"
+        }
+      ]
+    },
+    {
+      "name": "商业科技快讯",
+      "articles": [
+        {
+          "title": "火星殖民前夜：马斯克、叙事杠杆与一条万亿美元产业链",
+          "link": "https://mp.weixin.qq.com/s/aKEImPtdQmMy-f8uziwKDQ",
+          "source": "36氪",
+          "category": "商业科技快讯",
+          "publishTime": "21:36",
+          "pubDate": "2026-04-14T13:36:20.000Z"
+        },
+        {
+          "title": "AI裁员，裁到了“消费”这根大动脉？",
+          "link": "https://mp.weixin.qq.com/s/VWHltCsrDF9XmpVPiW_trA",
+          "source": "字母AI",
+          "category": "商业科技快讯",
+          "publishTime": "15:47",
+          "pubDate": "2026-04-14T07:47:28.000Z"
+        },
+        {
+          "title": "Anthropic最强模型被质疑夸大找漏洞能力；奥尔特曼住所一周内两次遇袭；需求火爆，苹果提升初代Macbook Neo产量至1000 万台｜极客早知道",
+          "link": "https://mp.weixin.qq.com/s/JaQKYAyEiAcsuTrH3WR_QA",
+          "source": "极客公园",
+          "category": "商业科技快讯",
+          "publishTime": "08:43",
+          "pubDate": "2026-04-14T00:43:39.000Z"
+        }
+      ]
+    },
+    {
+      "name": "AI产品与工具",
+      "articles": [
+        {
+          "title": "Hermes Agent，反“龙虾”情绪的一次烟花",
+          "link": "https://mp.weixin.qq.com/s/3geuMOfKCSx80C_EJqmnTg",
+          "source": "字母AI",
+          "category": "AI产品与工具",
+          "publishTime": "15:47",
+          "pubDate": "2026-04-14T07:47:28.000Z"
+        },
+        {
+          "title": "用好Agent最重要的技巧不是Skills，是这四个字。",
+          "link": "https://mp.weixin.qq.com/s/F7w9IWGSrCn2FbIgXoyvnA",
+          "source": "数字生命卡兹克",
+          "category": "AI产品与工具",
+          "publishTime": "10:09",
+          "pubDate": "2026-04-14T02:09:17.000Z"
+        }
+      ]
+    },
+    {
+      "name": "AI前沿资讯",
+      "articles": [
+        {
+          "title": "进入超 300 户家庭，为什么这个 3 万+的机器人值得买？",
+          "link": "https://mp.weixin.qq.com/s/1VxO0z2q3CrIGKzcV6ZB3Q",
+          "source": "极客公园",
+          "category": "AI前沿资讯",
+          "publishTime": "11:48",
+          "pubDate": "2026-04-14T03:48:21.000Z"
+        }
+      ]
+    },
+    {
+      "name": "商业洞察",
+      "articles": [
+        {
+          "title": "L3临门一脚，但准备好的企业不多",
+          "link": "https://mp.weixin.qq.com/s/ehKnAyVAo_vGIBsBAcdAkA",
+          "source": "36氪",
+          "category": "商业洞察",
+          "publishTime": "17:09",
+          "pubDate": "2026-04-14T09:09:51.000Z"
+        }
+      ]
+    }
+  ]
 }

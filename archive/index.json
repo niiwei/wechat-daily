@@ -3,7 +3,7 @@
     {
       "fileDate": "2026-04-14",
       "displayDate": "2026年4月14日星期二",
-      "articleCount": 0,
+      "articleCount": 14,
       "url": "./archive/2026-04-14.json"
     },
     {
@@ -17,6 +17,18 @@
       "displayDate": "2026年4月12日星期日",
       "articleCount": 0,
       "url": "./archive/2026-04-12.json"
+    },
+    {
+      "fileDate": "2026-04-11",
+      "displayDate": "2026年4月11日星期六",
+      "articleCount": 7,
+      "url": "./archive/2026-04-11.json"
+    },
+    {
+      "fileDate": "2026-04-10",
+      "displayDate": "2026年4月10日星期五",
+      "articleCount": 3,
+      "url": "./archive/2026-04-10.json"
     },
     {
       "fileDate": "2026-04-09",
