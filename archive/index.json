@@ -1,6 +1,12 @@
 {
   "archives": [
     {
+      "fileDate": "2026-04-14",
+      "displayDate": "2026年4月14日星期二",
+      "articleCount": 0,
+      "url": "./archive/2026-04-14.json"
+    },
+    {
       "fileDate": "2026-04-13",
       "displayDate": "2026年4月13日星期一",
       "articleCount": 3,
