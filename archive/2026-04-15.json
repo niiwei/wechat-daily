@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-04-16T09:12:11.280905+08:00",
-  "date": "2026年04月15日 星期三",
+  "generatedAt": "2026-04-19T01:05:49.924Z",
+  "date": "2026年4月15日星期三",
   "fileDate": "2026-04-15",
-  "totalArticles": 10,
+  "totalArticles": 12,
+  "note": "（公众号近日无更新，展示最近有内容的日期）",
   "categories": [
     {
       "name": "其他",
@@ -13,7 +14,31 @@
           "source": "极客公园",
           "category": "其他",
           "publishTime": "12:09",
-          "pubDate": "2026-04-15T12:09:10+08:00"
+          "pubDate": "2026-04-15T04:09:10.000Z"
+        },
+        {
+          "title": "智谱让微信支付宝躺赢了",
+          "link": "https://mp.weixin.qq.com/s/jWt0xaYFLGP5IrijpJRK9w",
+          "source": "字母AI",
+          "category": "其他",
+          "publishTime": "11:42",
+          "pubDate": "2026-04-15T03:42:05.000Z"
+        },
+        {
+          "title": "赛博脑白金，能治好AI的失忆症吗？",
+          "link": "https://mp.weixin.qq.com/s/KZCEzuybB_4FhjUQYftnsQ",
+          "source": "字母AI",
+          "category": "其他",
+          "publishTime": "11:42",
+          "pubDate": "2026-04-15T03:42:05.000Z"
+        },
+        {
+          "title": "一文带你看懂，火爆全网的Harness Engineering到底是个啥。",
+          "link": "https://mp.weixin.qq.com/s/yI1rQHVwJqszdpadzAe_4A",
+          "source": "数字生命卡兹克",
+          "category": "其他",
+          "publishTime": "10:08",
+          "pubDate": "2026-04-15T02:08:58.000Z"
         },
         {
           "title": "在生物世界，给Physical AI一个落脚点",
@@ -21,15 +46,7 @@
           "source": "36氪",
           "category": "其他",
           "publishTime": "08:18",
-          "pubDate": "2026-04-15T08:18:11+08:00"
-        },
-        {
-          "title": "港中文博士和前大疆智能制造负责人创业，要做AI时代的「个性化乐高」｜早起看早期",
-          "link": "https://mp.weixin.qq.com/s/9D65VooKbvWTPBwul1c-cg",
-          "source": "36氪",
-          "category": "其他",
-          "publishTime": "08:18",
-          "pubDate": "2026-04-15T08:18:11+08:00"
+          "pubDate": "2026-04-15T00:18:11.000Z"
         },
         {
           "title": "燃油附加费暴涨5倍，抠搜年轻人把明年的机票都囤好了",
@@ -37,7 +54,7 @@
           "source": "36氪",
           "category": "其他",
           "publishTime": "08:18",
-          "pubDate": "2026-04-15T08:18:11+08:00"
+          "pubDate": "2026-04-15T00:18:11.000Z"
         },
         {
           "title": "AI 时代的老板糊弄学",
@@ -45,7 +62,7 @@
           "source": "人人都是产品经理",
           "category": "其他",
           "publishTime": "07:46",
-          "pubDate": "2026-04-15T07:46:03+08:00"
+          "pubDate": "2026-04-14T23:46:03.000Z"
         }
       ]
     },
@@ -58,7 +75,7 @@
           "source": "极客公园",
           "category": "商业科技快讯",
           "publishTime": "08:51",
-          "pubDate": "2026-04-15T08:51:40+08:00"
+          "pubDate": "2026-04-15T00:51:40.000Z"
         },
         {
           "title": "8点1氪：许家印一审当庭认罪悔罪；交管部门回应新能源车牌绿色变白色；生成内容涉黄，哩布哩布AI回应",
@@ -66,20 +83,15 @@
           "source": "36氪",
           "category": "商业科技快讯",
           "publishTime": "08:18",
-          "pubDate": "2026-04-15T08:18:11+08:00"
-        }
-      ]
-    },
-    {
-      "name": "AI前沿资讯",
-      "articles": [
+          "pubDate": "2026-04-15T00:18:11.000Z"
+        },
         {
-          "title": "一文带你看懂，火爆全网的Harness Engineering到底是个啥。",
-          "link": "https://mp.weixin.qq.com/s/yI1rQHVwJqszdpadzAe_4A",
-          "source": "数字生命卡兹克",
-          "category": "AI前沿资讯",
-          "publishTime": "10:08",
-          "pubDate": "2026-04-15T10:08:58+08:00"
+          "title": "港中文博士和前大疆智能制造负责人创业，要做AI时代的「个性化乐高」｜早起看早期",
+          "link": "https://mp.weixin.qq.com/s/9D65VooKbvWTPBwul1c-cg",
+          "source": "36氪",
+          "category": "商业科技快讯",
+          "publishTime": "08:18",
+          "pubDate": "2026-04-15T00:18:11.000Z"
         }
       ]
     },
@@ -92,7 +104,7 @@
           "source": "人人都是产品经理",
           "category": "AI产品与工具",
           "publishTime": "07:46",
-          "pubDate": "2026-04-15T07:46:03+08:00"
+          "pubDate": "2026-04-14T23:46:03.000Z"
         }
       ]
     },
@@ -105,7 +117,7 @@
           "source": "人人都是产品经理",
           "category": "产品经理学习",
           "publishTime": "07:46",
-          "pubDate": "2026-04-15T07:46:03+08:00"
+          "pubDate": "2026-04-14T23:46:03.000Z"
         }
       ]
     }
