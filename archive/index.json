@@ -1,70 +1,10 @@
 {
   "archives": [
     {
-      "fileDate": "2026-04-18",
-      "displayDate": "2026年4月18日星期六",
+      "fileDate": "2026-04-19",
+      "displayDate": "2026年4月19日星期日",
       "articleCount": 0,
-      "url": "./archive/2026-04-18.json"
-    },
-    {
-      "fileDate": "2026-04-17",
-      "displayDate": "2026年4月17日星期五",
-      "articleCount": 0,
-      "url": "./archive/2026-04-17.json"
-    },
-    {
-      "fileDate": "2026-04-16",
-      "displayDate": "2026年4月16日星期四",
-      "articleCount": 0,
-      "url": "./archive/2026-04-16.json"
-    },
-    {
-      "fileDate": "2026-04-15",
-      "displayDate": "2026年04月15日 星期三",
-      "articleCount": 0,
-      "url": "./archive/2026-04-15.json"
-    },
-    {
-      "fileDate": "2026-04-14",
-      "displayDate": "2026年4月14日星期二",
-      "articleCount": 14,
-      "url": "./archive/2026-04-14.json"
-    },
-    {
-      "fileDate": "2026-04-13",
-      "displayDate": "2026年4月13日星期一",
-      "articleCount": 3,
-      "url": "./archive/2026-04-13.json"
-    },
-    {
-      "fileDate": "2026-04-12",
-      "displayDate": "2026年4月12日星期日",
-      "articleCount": 0,
-      "url": "./archive/2026-04-12.json"
-    },
-    {
-      "fileDate": "2026-04-11",
-      "displayDate": "2026年4月11日星期六",
-      "articleCount": 7,
-      "url": "./archive/2026-04-11.json"
-    },
-    {
-      "fileDate": "2026-04-10",
-      "displayDate": "2026年4月10日星期五",
-      "articleCount": 3,
-      "url": "./archive/2026-04-10.json"
-    },
-    {
-      "fileDate": "2026-04-09",
-      "displayDate": "2026年4月9日星期四",
-      "articleCount": 13,
-      "url": "./archive/2026-04-09.json"
-    },
-    {
-      "fileDate": "2026-04-08",
-      "displayDate": "2026年4月8日星期三",
-      "articleCount": 17,
-      "url": "./archive/2026-04-08.json"
+      "url": "./archive/2026-04-19.json"
     }
   ]
 }
