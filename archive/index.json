@@ -1,10 +1,1 @@
-{
-  "archives": [
-    {
-      "fileDate": "2026-04-19",
-      "displayDate": "2026年4月19日星期日",
-      "articleCount": 0,
-      "url": "./archive/2026-04-19.json"
-    }
-  ]
-}
+{"archives": [{"fileDate": "2026-04-20", "displayDate": "2026\u5e744\u670820\u65e5\u661f\u671f\u4e00", "articleCount": 6, "url": "./archive/2026-04-20.json"}, {"fileDate": "2026-04-19", "displayDate": "2026\u5e744\u670819\u65e5\u661f\u671f\u65e5", "articleCount": 0, "url": "./archive/2026-04-19.json"}]}
