@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-04-21T01:08:52.542Z",
+  "date": "2026年4月20日星期一",
+  "fileDate": "2026-04-20",
+  "totalArticles": 6,
+  "categories": [
+    {
+      "name": "AI前沿资讯",
+      "articles": [
+        {
+          "title": "AI斩杀线，Anthropic还要制造多少条？",
+          "link": "https://mp.weixin.qq.com/s/rg3BT5qBoEITLPk0cMME4A",
+          "source": "字母AI",
+          "category": "AI前沿资讯",
+          "publishTime": "11:55",
+          "pubDate": "2026-04-20T03:55:46.000Z"
+        },
+        {
+          "title": "史上最萌垫底，2026机器人半马抽象大赏",
+          "link": "https://mp.weixin.qq.com/s/AG36BaRY_bfGSeoDNihSbw",
+          "source": "36氪",
+          "category": "AI前沿资讯",
+          "publishTime": "08:05",
+          "pubDate": "2026-04-20T00:05:01.000Z"
+        }
+      ]
+    },
+    {
+      "name": "其他",
+      "articles": [
+        {
+          "title": "梁文锋想通了",
+          "link": "https://mp.weixin.qq.com/s/Q9-FXONYh3iLntW2pqUcjA",
+          "source": "字母AI",
+          "category": "其他",
+          "publishTime": "11:55",
+          "pubDate": "2026-04-20T03:55:46.000Z"
+        },
+        {
+          "title": "广东人口已达1.65亿，两年暴涨1500万",
+          "link": "https://mp.weixin.qq.com/s/fM0s69jsQ6alpju9w8xchg",
+          "source": "36氪",
+          "category": "其他",
+          "publishTime": "08:05",
+          "pubDate": "2026-04-20T00:05:01.000Z"
+        }
+      ]
+    },
+    {
+      "name": "商业洞察",
+      "articles": [
+        {
+          "title": "前华为工程师创业，实现临时键合载板存量循环，龙头客户已验证｜早起看早期",
+          "link": "https://mp.weixin.qq.com/s/WJLcGvGtgbUaR1GC-ywoRA",
+          "source": "36氪",
+          "category": "商业洞察",
+          "publishTime": "08:05",
+          "pubDate": "2026-04-20T00:05:01.000Z"
+        }
+      ]
+    },
+    {
+      "name": "商业科技快讯",
+      "articles": [
+        {
+          "title": "8点1氪：12306五一已拒绝抢票软件105.6万张票；万达电影宣布更名；DeepSeek被曝首次启动外部融资，估值超680亿",
+          "link": "https://mp.weixin.qq.com/s/QxzOLfOCm-Uz5CDd43-eow",
+          "source": "36氪",
+          "category": "商业科技快讯",
+          "publishTime": "08:05",
+          "pubDate": "2026-04-20T00:05:01.000Z"
+        }
+      ]
+    }
+  ]
+}
